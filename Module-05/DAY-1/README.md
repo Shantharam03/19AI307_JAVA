@@ -1,47 +1,77 @@
-# Ex.No:5(A)  DATA HIDING AND ENCAPSULATION
+# Ex.No:5(A) INPUTSTREAMREADER
+
+## QUESTION:
+Write a Java program to read input from the user using **InputStreamReader**.
+
+
+
 ## AIM:
-To Create a java program to display name and location of the employee and use the encapsulation concepts
+To write a Java program to demonstrate **reading input using InputStreamReader and BufferedReader**.
+
+
 
 ## ALGORITHM :
-1.  Start the program
-2.	Define class `Employee`:
--	a) Declare two private `String` variables: `name1` and `name2`
--	b) Define `setname(String n1)` method to set `name1` to `n1`
--	c) Define `setname2(String n2)` method to set `name2` to `n2`
--	d) Define `get1()` method to return `name1`
--	e) Define `get2()` method to return `name2`
-3.	Define `Main` class with `main` method:
--	a) Create `Scanner` object `sc` for input
--	b) Read `name1` and `name2` from user input
--	c) Create ` Employee ` object `hl`
--	d) Use `hl.setname(name1)` and `hl.setname2(name2)` to set the names
--	e) Print the values of `hl.get1()` and `hl.get2()`
-4.	End
-
-
+1. Start the program.  
+2. Import the necessary packages `java.io`.  
+3. Create a class `Main`.  
+4. Inside the `main()` method create an object of `InputStreamReader`.  
+5. Wrap it using `BufferedReader` to read input efficiently.  
+6. Read a string input using `readLine()`.  
+7. Display the entered input.  
+8. Handle exceptions using `throws IOException`.  
+9. Stop the program.
 
 
 
 ## PROGRAM:
- ```
+
+```java
 /*
-Program to implement a Data Hiding & Encapsulation using Java
-Developed by: 
-RegisterNumber:  
+Program to implement InputStreamReader using Java
+Developed by: SHANTHARAM M
+RegisterNumber: 212224040307
 */
+
+import java.io.*;
+
+public class Main{
+    public static void main(String[] args) throws IOException{
+
+        InputStreamReader isr = new InputStreamReader(System.in);
+        BufferedReader br = new BufferedReader(isr);
+
+        String input = br.readLine();
+
+        System.out.println("You entered: " + input);
+    }
+}
 ```
 
-## Sourcecode.java:
 
+## SOURCE CODE:
 
+Compile the program using
 
+```
+javac Main.java
+```
 
+Run the program using
 
+```
+java Main
+```
 
+---
 
 ## OUTPUT:
 
+```
+Hello Java
+You entered: Hello Java
+```
 
 
 ## RESULT:
-Thus , the  java program to display name and location of the employee and use the encapsulation concepts executed successfully.
+
+Thus, the Java program to read input using **InputStreamReader and BufferedReader** was executed successfully and the output was verified.
